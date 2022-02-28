@@ -1,0 +1,239 @@
+/* Start of CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-display: auto;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End of CSS Reset */
+/* Custom Fonts */
+@font-face {
+  /* Warnings & headings */
+  font-family: DeathStranding;
+  src: url("/assets/ds.woff2");
+}
+@font-face {
+  /* General text */
+  font-family: GothamBook;
+  src: url("/assets/Gotham-Book.woff2");
+}
+@font-face {
+  /* Numbers(Mono) */
+  font-family: OCRA;
+  src: url("/assets/OCR-ABT.woff2");
+}
+/* Background */
+body {
+  background-color: #19222a;
+  background-repeat: repeat-y;
+  background-image: url("/assets/bg-stripe.png");
+  background-position: 90%, 0%;
+}
+
+#dslogo {
+  display: flex;
+  justify-content: center;
+}
+#dslogo img {
+  width: 400px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.navbar span {
+  font-family: DeathStranding;
+  font-size: 2rem;
+  color: #bdeaea;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 700px;
+  margin: 0 auto;
+  background-color: rgba(0, 2, 5, 0.4);
+  border-radius: 10px;
+}
+.content-container .menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+.content-container .menu-container .menu-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+.content-container .content-frame {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  height: fit-content;
+}
+.content-container .content-frame .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: GothamBook;
+  color: #bdeaea;
+  font-size: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+.content-container .content-frame .content-text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.content-container .content-frame .content-title {
+  display: flex;
+  flex-direction: row;
+}
+.content-container .content-frame .content-title h2 {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+.content-container .content-frame .content-title img {
+  width: 35px;
+  height: 25px;
+  margin: 5px;
+}
+.content-container .content-frame .content-title p {
+  font-family: OCRA;
+  font-size: 1.5rem;
+  padding-right: 20px;
+}
+.content-container .content-frame .content-desc {
+  margin-right: 10px;
+  font-size: 1.125rem;
+}
+.content-container .content-frame .content-desc p {
+  margin: 10px 0px;
+}
+.content-container .content-frame .content-levels .levels {
+  margin: 10px 0px;
+}
+.content-container .content-frame .content-levels .levels span {
+  font-size: 1.125rem;
+}
+.content-container .content-frame .content-levels .level-row {
+  display: flex;
+  flex-direction: row;
+  font-family: OCRA;
+  font-size: 1.125rem;
+  color: #fff;
+  margin: 5px 0px;
+}
+.content-container .content-frame .content-levels .level-row p {
+  padding-right: 30px;
+}
+.content-container .content-frame .content-levels .level-row .units {
+  width: 60px;
+  text-align: end;
+}
+.content-container .content-frame .content-levels .level-row img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+}
+.content-container .content-frame .content-image {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+.content-container .content-frame .content-image h2 {
+  margin: 5px 0px;
+  font-size: 1.5rem;
+}
+.content-container .content-frame .content-image p {
+  margin: 5px 0px;
+  font-size: 1rem;
+}
+.content-container .content-frame .content-image img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
