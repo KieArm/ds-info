@@ -104,7 +104,7 @@ body {
   justify-content: center;
 }
 #dslogo img {
-  width: 400px;
+  width: 350px;
 }
 
 .navbar {
@@ -130,17 +130,23 @@ body {
   border-radius: 10px;
 }
 .content-container .menu-container {
-  display: flex;
-  flex-direction: column;
   width: 90%;
   margin: 0 auto;
 }
 .content-container .menu-container .menu-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 20px 0px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+}
+.content-container .menu-container .menu-icons .menu-icon {
+  display: flex;
+  height: 65ppx;
+  width: 65px;
+  margin: 10px 30px;
+  padding: 10px;
 }
 .content-container .content-frame {
   display: flex;
@@ -190,13 +196,13 @@ body {
 .content-container .content-frame .content-desc p {
   margin: 10px 0px;
 }
-.content-container .content-frame .content-levels .levels {
+.content-container .content-frame .content-levels .levels, .content-container .content-frame .content-pcc .levels {
   margin: 10px 0px;
 }
-.content-container .content-frame .content-levels .levels span {
+.content-container .content-frame .content-levels .levels span, .content-container .content-frame .content-pcc .levels span {
   font-size: 1.125rem;
 }
-.content-container .content-frame .content-levels .level-row {
+.content-container .content-frame .content-levels .level-row, .content-container .content-frame .content-pcc .level-row {
   display: flex;
   flex-direction: row;
   font-family: OCRA;
@@ -204,17 +210,25 @@ body {
   color: #fff;
   margin: 5px 0px;
 }
-.content-container .content-frame .content-levels .level-row p {
-  padding-right: 30px;
-}
-.content-container .content-frame .content-levels .level-row .units {
+.content-container .content-frame .content-levels .level-row .units, .content-container .content-frame .content-pcc .level-row .units {
   width: 60px;
   text-align: end;
 }
-.content-container .content-frame .content-levels .level-row img {
+.content-container .content-frame .content-levels .level-row img, .content-container .content-frame .content-pcc .level-row img {
   width: 25px;
   height: 25px;
   margin: 0 10px;
+}
+.content-container .content-frame .content-pcc {
+  display: flex;
+  flex-direction: row;
+}
+.content-container .content-frame .content-pcc .levels {
+  padding-right: 50px;
+}
+.content-container .content-frame .content-pcc .level-row {
+  display: flex;
+  flex-direction: column;
 }
 .content-container .content-frame .content-image {
   display: flex;
@@ -234,6 +248,66 @@ body {
   height: 350px;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.border-ds {
+  position: relative;
+  --b:4px;
+  /* thickness */
+  --c:rgba(190, 190, 190, 0);
+  /* color */
+  --w:4px;
+  /* width */
+  border: var(--b) solid transparent;
+  /* space for the border */
+  --g:#0000 90deg,var(--c) 0;
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--g)) 0 0, conic-gradient(from 180deg at top var(--b) right var(--b), var(--g)) 100% 0, conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--g)) 0 100%, conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--g)) 100% 100%;
+  background-size: var(--w) var(--w);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  /* inside(off) or outside(on) etc */
+}
+.border-ds:hover {
+  animation: ds-blink 0.8s infinite ease;
+}
+@keyframes ds-blink {
+  20% {
+    --c:rgba(189,234,234,.2);
+  }
+  40% {
+    --c:rgba(189,234,234,.4);
+  }
+  60% {
+    --c:rgba(189,234,234,.6);
+  }
+  80% {
+    --c:rgba(189,234,234,.8);
+  }
+  100% {
+    --c:rgba(189,234,234,1);
+  }
+}
+.border-ds::before {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.border-ds::after {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.test {
+  width: 100px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
