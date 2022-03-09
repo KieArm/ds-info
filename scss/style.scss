@@ -99,15 +99,16 @@ body {
     background-color: rgba(25,34,42,1);
     background-repeat: repeat-y;
     background-image: url("/assets/bg-stripe.png");
-    background-position: 90%, 0%;
+    background-position: 85%, 0%;
 }
 
 #dslogo {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 
     img {
-        width: 350px;
+        width: 250px;
     }
 }
 
@@ -115,6 +116,8 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 
     span {
         font-family: DeathStranding;
@@ -128,8 +131,9 @@ body {
 .content-container {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    height: 700px;
+    width: 75%;
+    max-width: 1080px;
+    height: auto;
     margin: 0 auto;
     background-color: rgba(0,2,5,0.4);
     border-radius: 10px;
@@ -148,11 +152,17 @@ body {
 
             .menu-icon {
               display: flex;
-              height: 65ppx;
+              height: 65px;
               width: 65px;
               margin: 10px 30px;
               padding: 10px;
             }
+        }
+
+        .menu-select {
+          display: flex;
+          flex-direction: row;
+          margin: 20px 0;
         }
     }
 
@@ -181,6 +191,12 @@ body {
           width: 60%;
         }
 
+        .content-text-wep {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+        }
+
         .content-title {
           display: flex;
           flex-direction: row;
@@ -203,6 +219,10 @@ body {
           }
         }
 
+        .content-title-wep {
+          margin-bottom: 10px;
+        }
+
         .content-desc {
           margin-right: 10px;
           font-size: 1.125rem;
@@ -212,12 +232,45 @@ body {
           }
         }
 
-        .content-levels, .content-pcc {
+        .content-levels, .content-levels-right, .content-pcc {
           .levels {
             margin: 10px 0px;
             
             span {
               font-size: 1.125rem;
+            }
+          }
+
+          .levels-row-wep {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr;
+            align-items: center;
+            // margin: 5px 0px;
+          }
+
+          .levels-row-veh {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            align-items: center;
+          }
+
+          .levels-row {
+            display: flex;
+            justify-content: end;
+            font-family: OCRA;
+            color: #fff;
+            font-size: 0.9rem;
+            margin: 5px 5px;
+
+            p {
+              text-align: end;
+              padding-right: 5px;
+            }
+
+            img {
+              justify-content: end;
+              width: 20px;
+              height: 20px;
             }
           }
 
@@ -240,6 +293,12 @@ body {
               margin: 0 10px;
             }
           }
+        }
+
+        .content-levels-right {
+          margin-top: 46px;
+          margin-left: 30px;
+          width: 50%;
         }
 
         .content-pcc {
@@ -332,7 +391,38 @@ body {
   }
 }
 
-.test {
-  width: 100px;
-  height: 100px;
+// Dropdown Styling
+$glass: rgba(255, 255, 255, 0.2);
+$glass-icon: rgba(255, 255, 255, 0.3);
+$option: rgb(0,2,5);
+
+select {
+  // Reset
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  // Personalize
+  width: 20em;
+  height: 2em;
+  padding: 0 4em 0 1em;
+  background: url(/assets/down-white.svg)
+    no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, $glass-icon 3em, $glass 3em);
+  color: white;
+  border-radius: 0.25em;
+  cursor: pointer;
+  // <option> colors
+  option {
+    color: inherit;
+    background-color: $option;
+  }
+  // Remove focus outline
+  &:focus {
+    outline: none;
+  }
+  // Remove IE arrow
+  &::-ms-expand {
+    display: none;
+  }
 }
