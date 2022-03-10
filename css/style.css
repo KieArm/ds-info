@@ -95,7 +95,7 @@ select {
 body {
   background-color: #19222a;
   background-repeat: repeat-y;
-  background-image: url("/assets/bg-stripe.png");
+  background-image: url("/assets/bg-stripe-2.png");
   background-position: 85%, 0%;
 }
 
@@ -185,6 +185,11 @@ body {
   flex-direction: column;
   width: 50%;
 }
+.content-container .content-frame .content-text-order {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
 .content-container .content-frame .content-title {
   display: flex;
   flex-direction: row;
@@ -224,7 +229,7 @@ body {
   grid-template-columns: 3fr 1fr 1fr;
   align-items: center;
 }
-.content-container .content-frame .content-levels .levels-row-veh, .content-container .content-frame .content-levels-right .levels-row-veh, .content-container .content-frame .content-pcc .levels-row-veh {
+.content-container .content-frame .content-levels .levels-row-veh, .content-container .content-frame .content-levels .levels-row-road, .content-container .content-frame .content-levels-right .levels-row-veh, .content-container .content-frame .content-levels-right .levels-row-road, .content-container .content-frame .content-pcc .levels-row-veh, .content-container .content-frame .content-pcc .levels-row-road {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: center;
@@ -245,6 +250,14 @@ body {
   justify-content: end;
   width: 20px;
   height: 20px;
+}
+.content-container .content-frame .content-levels .level-line, .content-container .content-frame .content-levels-right .level-line, .content-container .content-frame .content-pcc .level-line {
+  display: flex;
+  flex-direction: column;
+  font-family: OCRA;
+  color: #fff;
+  font-size: 1rem;
+  margin: 5px 5px;
 }
 .content-container .content-frame .content-levels .level-row, .content-container .content-frame .content-levels-right .level-row, .content-container .content-frame .content-pcc .level-row {
   display: flex;
@@ -267,6 +280,9 @@ body {
   margin-top: 46px;
   margin-left: 30px;
   width: 50%;
+}
+.content-container .content-frame .content-levels-reward {
+  width: 100%;
 }
 .content-container .content-frame .content-pcc {
   display: flex;
@@ -355,21 +371,25 @@ body {
 }
 
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: 0;
   outline: 0;
-  font: inherit;
-  width: 20em;
-  height: 2em;
-  padding: 0 4em 0 1em;
-  background: url(/assets/down-white.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
-  color: white;
-  border-radius: 0.25em;
+  width: 29rem;
+  height: 2rem;
+  padding: 0 4rem 0 1rem;
+  background: url(/assets/down-white.svg) no-repeat right 0.8rem center/1.4rem, linear-gradient(to left, #01395E 3rem, #03659D 3rem);
+  color: #bdeaea;
+  font-family: GothamBook;
+  font-size: 1rem;
   cursor: pointer;
 }
 select option {
-  color: inherit;
   background-color: #000205;
+}
+select option:disabled {
+  color: #00e1ff;
 }
 select:focus {
   outline: none;

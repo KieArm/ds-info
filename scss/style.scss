@@ -98,7 +98,7 @@ select {
 body {
     background-color: rgba(25,34,42,1);
     background-repeat: repeat-y;
-    background-image: url("/assets/bg-stripe.png");
+    background-image: url("/assets/bg-stripe-2.png");
     background-position: 85%, 0%;
 }
 
@@ -197,6 +197,12 @@ body {
           width: 50%;
         }
 
+        .content-text-order {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+        }
+
         .content-title {
           display: flex;
           flex-direction: row;
@@ -248,7 +254,7 @@ body {
             // margin: 5px 0px;
           }
 
-          .levels-row-veh {
+          .levels-row-veh, .levels-row-road {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             align-items: center;
@@ -272,6 +278,15 @@ body {
               width: 20px;
               height: 20px;
             }
+          }
+
+          .level-line {
+            display: flex;
+            flex-direction: column;
+            font-family: OCRA;
+            color: #fff;
+            font-size: 1rem;
+            margin: 5px 5px;
           }
 
           .level-row {
@@ -299,6 +314,10 @@ body {
           margin-top: 46px;
           margin-left: 30px;
           width: 50%;
+        }
+
+        .content-levels-reward {
+          width: 100%;
         }
 
         .content-pcc {
@@ -392,30 +411,39 @@ body {
 }
 
 // Dropdown Styling
-$glass: rgba(255, 255, 255, 0.2);
-$glass-icon: rgba(255, 255, 255, 0.3);
+// $glass: rgba(255, 255, 255, 0.2);
+$glass: #03659D;
+// $glass-icon: rgba(255, 255, 255, 0.3);
+$glass-icon: #01395E;
 $option: rgb(0,2,5);
 
 select {
   // Reset
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: 0;
   outline: 0;
-  font: inherit;
   // Personalize
-  width: 20em;
-  height: 2em;
-  padding: 0 4em 0 1em;
+  width: 29rem;
+  height: 2rem;
+  padding: 0 4rem 0 1rem;
   background: url(/assets/down-white.svg)
-    no-repeat right 0.8em center / 1.4em,
-    linear-gradient(to left, $glass-icon 3em, $glass 3em);
-  color: white;
-  border-radius: 0.25em;
+    no-repeat right 0.8rem center / 1.4rem,
+    linear-gradient(to left, $glass-icon 3rem, $glass 3rem);
+  color: rgba(189,234,234,1);
+  font-family: GothamBook;
+  font-size: 1rem;
+
   cursor: pointer;
   // <option> colors
   option {
-    color: inherit;
     background-color: $option;
+
+    &:disabled {
+      // color: #bdeaea;
+      color: #00e1ff;
+    }
   }
   // Remove focus outline
   &:focus {
