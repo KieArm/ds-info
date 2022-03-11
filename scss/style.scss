@@ -98,7 +98,7 @@ select {
 body {
     background-color: rgba(25,34,42,1);
     background-repeat: repeat-y;
-    background-image: url("/assets/bg-stripe-2.png");
+    background-image: url("/assets/bg-stripe.png");
     background-position: 85%, 0%;
 }
 
@@ -116,14 +116,14 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1080px;
     margin: 0 auto;
 
     span {
         font-family: DeathStranding;
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: rgba(189,234,234,1);
-        margin: 10px 20px;
+        margin: 10px 10px;
         cursor: pointer;
     }
 }
@@ -132,7 +132,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 75%;
-    max-width: 1080px;
+    max-width: 768px;
     height: auto;
     margin: 0 auto;
     background-color: rgba(0,2,5,0.4);
@@ -154,14 +154,20 @@ body {
               display: flex;
               height: 65px;
               width: 65px;
-              margin: 10px 30px;
+              margin: 5px;
               padding: 10px;
+            }
+
+            .menu-icon-wider {
+              width: 150px;
+              height: 50px;
             }
         }
 
         .menu-select {
           display: flex;
           flex-direction: row;
+          justify-content: center;
           margin: 20px 0;
         }
     }
@@ -188,13 +194,7 @@ body {
         .content-text {
           display: flex;
           flex-direction: column;
-          width: 60%;
-        }
-
-        .content-text-wep {
-          display: flex;
-          flex-direction: column;
-          width: 50%;
+          width: 100%;
         }
 
         .content-text-order {
@@ -225,10 +225,6 @@ body {
           }
         }
 
-        .content-title-wep {
-          margin-bottom: 10px;
-        }
-
         .content-desc {
           margin-right: 10px;
           font-size: 1.125rem;
@@ -238,7 +234,7 @@ body {
           }
         }
 
-        .content-levels, .content-levels-right, .content-pcc {
+        .content-levels, .content-pcc {
           .levels {
             margin: 10px 0px;
             

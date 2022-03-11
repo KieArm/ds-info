@@ -10,7 +10,7 @@ navLink.forEach((link) => {
     let url = e.currentTarget.dataset.url;
     
     // Fetch data for new dom content
-    fetch(`${url}.html`)
+    fetch(`/data/${url}.html`)
       .then((response) => {
         return response.text();
       })
@@ -25,7 +25,7 @@ navLink.forEach((link) => {
             option.addEventListener('change', e => {
             let url = e.target.value;
   
-              fetch(`${url}.html`)
+              fetch(`/data/${url}.html`)
               .then((response) => {
                 return response.text();
               })
@@ -41,7 +41,7 @@ navLink.forEach((link) => {
             icon.addEventListener('click', e => {
             let url = e.currentTarget.dataset.url;
 
-              fetch(`${url}.html`)
+              fetch(`/data/${url}.html`)
               .then((response) => {
                 return response.text();
               })
