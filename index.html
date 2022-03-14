@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/style.css">
-    <title>KA | DS:DC Helper</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>KA | DS: Helper</title>
+  </head>
+  <body>
     <div class="main-container">
-        <div id="dslogo">
-            <img src="assets/ds-logo-white.png" alt="">
+      <div id="dslogo">
+        <img src="assets/ds-logo-white.png" alt="" />
+        <p>Quick Reference Helper</p>
+      </div>
+      <div class="nav-container">
+        <nav class="navbar">
+          <a href="/"
+            ><img class="border-ds" src="assets/sh-icon.png" alt=""
+          /></a>
+          <!-- Order details to be added after Directors Cut PC Release -->
+          <!-- <span class="nav-link" data-url="orders">Orders</span> -->
+          <span class="nav-link border-ds" data-url="roads">Roads</span>
+          <span class="nav-link border-ds" data-url="rewards">Rewards</span>
+          <span class="nav-link border-ds" data-url="equipment">Equipment</span>
+          <span class="nav-link border-ds" data-url="structures"
+            >Structures</span
+          >
+        </nav>
+      </div>
+      <div class="content-container">
+        <div class="content-frame">
+          <div class="content">
+            <div class="content-text">
+              <div class="content-title">
+                <h1>Quick Reference Contents</h1>
+              </div>
+              <div class="content-desc-index">
+                <span
+                  >Warning: Information included on this website may contain
+                  spoilers.</span
+                >
+                <p>Roads</p>
+                <span
+                  >View the materials requried for each section of the road
+                  network.</span
+                >
+                <p>Rewards</p>
+                <span
+                  >View the rewards, unlocks and tokens of appreciation
+                  available at each location. Includes how to connect the
+                  location to the UCAs Chiral Network.</span
+                >
+                <p>Equipment</p>
+                <span
+                  >View material cost for all fabricated equipment, tools,
+                  weapons and vehicles.</span
+                >
+                <p>Structures</p>
+                <span
+                  >Contains details for each of the buildable structures
+                  including material cost, important notes and bandwidth
+                  used.</span
+                >
+              </div>
+              <div class="content-desc-footer">
+                <p>DS Helper Project by KA</p>
+                <p>Last Updated: <span>14/03/2022</span></p>
+                <a href="https://kierana.dev" target="_blank"
+                  >View Author's Portfolio</a
+                >
+                <a href="https://github.com/KieArm/ds-info" target="_blank"
+                  >View GitHub Repository</a
+                >
+                <p class="copyright">
+                  DEATH STRANDING is a trademark of Sony Interactive
+                  Entertainment LLC. Created and developed by KOJIMA
+                  PRODUCTIONS.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="nav-container">
-            <nav class="navbar">
-                <span class="nav-link" data-url="orders">Orders</span>
-                <span class="nav-link" data-url="roads">Roads</span>
-                <span class="nav-link" data-url="rewards">Rewards</span>
-                <span class="nav-link" data-url="equipment">Equipment</span>
-                <span class="nav-link" data-url="structures">Structures</span>
-            </nav>
-        </div>
-        <div class="content-container">
-            
-        </div>
+      </div>
     </div>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>
