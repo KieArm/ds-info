@@ -194,8 +194,7 @@ body::-webkit-scrollbar {
   padding: 10px;
 }
 .content-container .menu-container .menu-icons .menu-icon-wider {
-  width: 150px;
-  height: 50px;
+  width: 125px;
 }
 .content-container .menu-container .menu-select {
   display: flex;
