@@ -1,25 +1,20 @@
 # Death Stranding Quick Reference Fansite
 
-(SPA) Single Page Application Project
-
-Contains game data regarding:
-
-```
- Roads
- Rewards
- Equipment
- Structures
-```
+Single-page application (SPA) with only JavaScript demo.
 
 Uses the JavaScript Fetch API and ES6 promises to update DOM sections without reloading the page.
 
 Page content is stored within html templates at /data/
 
-Improvements/Todo:
+Contains game data regarding:
 
-```
- Convert data to JSON and/or store data in a database.
- Convert to React
-```
+- Roads
+- Rewards
+- Equipment
+- Structures
 
-Last Updated: 25/03/2022
+[Live Demo](https://kierana.dev/ds-info/)
+
+## Preview
+
+![Preview](https://kierana.dev/assets/proj_ds.png)
